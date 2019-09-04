@@ -1,0 +1,1513 @@
+html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+*, *:after, *:before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../media/fonts/icomoon.eot?n6hr6e');
+    src:  url('../media/fonts/icomoon.eot?n6hr6e#iefix') format('embedded-opentype'),
+    url('../media/fonts/icomoon.ttf?n6hr6e') format('truetype'),
+    url('../media/fonts/icomoon.woff?n6hr6e') format('woff'),
+    url('../media/fonts/icomoon.svg?n6hr6e#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-envelope-o:before {
+    content: "\f003";
+}
+.icon-map-marker:before {
+    content: "\f041";
+}
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('../media/webfonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../media/webfonts/ProximaNova-Regular.woff') format('woff'),
+    url('../media/webfonts/ProximaNova-Regular.ttf')  format('truetype'),
+    url('../media/webfonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Black';
+    src: url('../media/webfonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
+    url('../media/webfonts/ProximaNova-Black.otf')  format('opentype'),
+    url('../media/webfonts/ProximaNova-Black.woff') format('woff'),
+    url('../media/webfonts/ProximaNova-Black.ttf')  format('truetype'),
+    url('../media/webfonts/ProximaNova-Black.svg#ProximaNova-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../media/webfonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../media/webfonts/ProximaNova-Bold.otf')  format('opentype'),
+    url('../media/webfonts/ProximaNova-Bold.woff') format('woff'),
+    url('../media/webfonts/ProximaNova-Bold.ttf')  format('truetype'),
+    url('../media/webfonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-ExtraBold';
+    src: url('../media/webfonts/ProximaNova-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../media/webfonts/ProximaNova-ExtraBold.otf')  format('opentype'),
+    url('../media/webfonts/ProximaNova-ExtraBold.woff') format('woff'),
+    url('../media/webfonts/ProximaNova-ExtraBold.ttf')  format('truetype'),
+    url('../media/webfonts/ProximaNova-ExtraBold.svg#ProximaNova-ExtraBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaT-Thin';
+    src: url('../media/webfonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../media/webfonts/ProximaNovaT-Thin.otf')  format('opentype'),
+    url('../media/webfonts/ProximaNovaT-Thin.woff') format('woff'),
+    url('../media/webfonts/ProximaNovaT-Thin.ttf')  format('truetype'),
+    url('../media/webfonts/ProximaNovaT-Thin.svg#ProximaNovaT-Thin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'ProximaNova-Regular', sans-serif;
+    font-size: 18px;
+}
+ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #000;
+}
+.container{
+    max-width: 1140px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.colored{
+    color: #51aead;
+}
+.header{
+    min-height: 72px;
+    box-shadow: 3px 5px 19px 5px rgba(50, 50, 50, 0.1);
+    background-color: #ffffff;
+}
+.header .header-content{
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+}
+.logo{
+    margin-right: 200px;
+}
+.header .nav ul{
+    display: flex;
+}
+.header .nav ul li{
+    padding: 0 28px;
+    line-height: 40px;
+}
+.header .nav ul li:last-child{
+    padding-right: 50px;
+}
+.header .nav ul li a{
+    font-size: 16px;
+    color: #0c0c0c;
+    font-variant: small-caps;
+    transition: 1s ease all;
+}
+.tel-number{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'ProximaNova-Bold';
+    margin-right: 39px;
+    transition: 0.8s ease all;
+}
+.default-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 36px;
+    box-shadow: 0 0 15px 1px rgba(108, 108, 108, 0.11);
+    border-radius: 18px;
+    background-color: #51aead;
+    transition: .8s ease all;
+}
+.default-btn p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.burger{
+    display: none;
+}
+#nav-icon1 {
+    width: 40px;
+    height: 25px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    cursor: pointer;
+}
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #51aead;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease;
+    -moz-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease;
+}
+#nav-icon1 span:nth-child(1) {
+    top: 0px;
+}
+#nav-icon1 span:nth-child(2) {
+    top: 10px;
+}
+#nav-icon1 span:nth-child(3) {
+    top: 20px;
+}
+#nav-icon1.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+#nav-icon1.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+.telemetrics{
+    background-image: url("../media/section1bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 600px;
+}
+.telemetrics-text-box{
+    padding-top: 229px;
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+}
+.telemetrics-title{
+    font-family: 'ProximaNova-ExtraBold';
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45.03px;
+    padding-bottom: 27px;
+}
+.telemetrics-text{
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 24px;
+}
+.telemetrics-text-box .default-btn{
+    width: 222px;
+    height: 50px;
+    box-shadow: 0 0 15px 1px rgba(108, 108, 108, 0.11);
+    border-radius: 25px;
+    margin-bottom: 21px;
+}
+.telemetrics-border{
+    width: 120px;
+    height: 120px;
+    border: 14px solid #70c8c7;
+    margin-left: 730px;
+}
+.telemetrics-arrow{
+    width: 210px;
+    height: 95px;
+    background-color: #fff;
+    position: relative;
+    filter: drop-shadow(0 3px 12px rgba(0,0,0,0.05));
+    box-shadow: 0 0 28px 2px rgba(108, 108, 108, 0.1);
+    margin-top: 25px;
+    margin-left: 29px;
+    padding-top: 27px;
+    padding-left: 31px;
+}
+.telemetrics-arrow:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border-width: 46.5px 0 46.5px 56px;
+    border-style: solid;
+    border-color: transparent #fff;
+}
+.telemetrics-arrow p{
+    font-family: 'ProximaNova-ExtraBold';
+    font-size: 20px;
+    color: #46bbae;
+}
+.telemetrics-arrow:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 93px;
+    border-radius: 4px;
+    background-color: #51aead;
+}
+.features-title{
+    font-family: 'ProximaNova-Black';
+    text-align: center;
+    padding-top: 146px;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.features-content{
+    position: relative;
+}
+.feature{
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.feature-img-wrapper{
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 7px 19px 5px rgba(88, 88, 88, 0.12);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-img-wrapper img{
+    z-index: 5;
+}
+.feature-text-box{
+    max-width: 315px;
+}
+.feature-text-box-title{
+    font-family: 'ProximaNova-ExtraBold';
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+.feature-text-box-text{
+    font-weight: 300;
+    line-height: 18px;
+    font-size: 13px;
+}
+.features-content img{
+    display: block;
+    margin: 0 auto;
+}
+.feature:nth-child(2), .feature:nth-child(3), .feature:nth-child(4){
+    flex-direction: row-reverse;
+    top: 20px;
+}
+.feature:nth-child(2){
+    top: 12%;
+    left: 6%;
+}
+.feature:nth-child(5){
+    top: 12%;
+    right: 4%;
+}
+.feature:nth-child(3){
+    top: 44%;
+    left: 1%;
+}
+.feature:nth-child(6){
+    top: 43%;
+    right: 5%;
+}
+.feature:nth-child(4){
+    top: 73%;
+    left: 5%;
+}
+.feature:nth-child(7){
+    right: 5%;
+    top: 72%;
+}
+.feature:nth-child(2) .feature-text-box{
+    position: relative;
+    right: 18px;
+    top: 8px;
+}
+.feature:nth-child(3) .feature-text-box{
+    max-width: none;
+    position: relative;
+    right: 10px;
+}
+.feature:nth-child(4) .feature-text-box{
+     max-width: 310px;
+    position: relative;
+    right: 20px;
+    top: 5px;
+ }
+.feature:nth-child(5) .feature-text-box{
+    max-width: 320px;
+    position: relative;
+    left: 37px;
+    top: 12px;
+}
+.feature:nth-child(6) .feature-text-box{
+    max-width: 241px;
+    position: relative;
+    left: 15px;
+    top: 16px;
+}
+.feature:nth-child(7) .feature-text-box{
+    max-width: 305px;
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+.TA-system{
+    background-image: url('../media/TAbg.jpg');
+    background-repeat: no-repeat;
+    min-height: 657px;
+    background-position: center;
+}
+.TA-title{
+    padding-top: 200px;
+    padding-bottom: 53px;
+    max-width: 791px;
+    font-family: 'ProximaNova-ExtraBold';
+    font-size: 36px;
+    color: #ffffff;
+
+}
+.TA-text{
+    max-width: 524px;
+    color: #ffffff;
+    font-size: 18px;
+    padding-left: 62px;
+    position: relative;
+}
+.TA-text:before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 6px solid #fff;
+    background-color: #4abebd;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+.price-title{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'ProximaNova-Black'
+}
+.price-table{
+    border: 10px solid #62b6b5;
+    background-color: #fcfcfc;
+    max-width: 920px;
+    min-height: 393px;
+    margin: 0 auto;
+    padding-left: 48px;
+}
+.service-name{
+    padding-top: 41px;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'ProximaNova-ExtraBold';
+    padding-bottom: 12px;
+}
+.service-and-cost{
+    display: flex;
+    align-items: center;
+}
+.service{
+    font-size: 18px;
+    line-height: 41px;
+    text-transform: uppercase;
+    min-width: 480px;
+    margin-right: 140px;
+    font-weight: 600;
+}
+.cost{
+    font-size: 18px;
+    color: #62b6b5;
+    text-transform: uppercase;
+}
+.bar{
+    width: 93%;
+    height: 1px;
+    background-color: #c4c4c4;
+}
+.price .default-btn{
+    width: 222px;
+    height: 50px;
+    box-shadow: 0 0 15px 1px rgba(108, 108, 108, 0.11);
+    border-radius: 25px;
+    margin: 67px auto 7px;
+}
+.mobile-app{
+    background-image: url('../media/pbdisbg.jpg');
+    min-height: 657px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.mobile-app-wrapper{
+    display: flex;
+}
+.mobile-app-title{
+    font-family: 'ProximaNova-ExtraBold';
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 400;
+    padding-top: 200px;
+    padding-bottom: 38px;
+    max-width: 563px;
+}
+.mobile-app-textbox{
+    margin-right: 106px;
+}
+.mobile-app-text{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 48px;
+    color: #ffffff;
+    padding-left: 60px;
+    position: relative;
+}
+.mobile-app-text:before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 6px solid #fff;
+    background-color: #4abebd;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+.download{
+    padding-top: 216px;
+}
+.download img:first-child{
+    display: block;
+    margin-bottom: 37px;
+}
+.web-client-content{
+    max-width: 673px;
+    min-height: 351px;
+    border: 10px solid #62b6b5;
+    background-color: #fcfcfc;
+    margin: 0 auto 89px;
+}
+.web-client-title{
+    font-family: 'ProximaNova-ExtraBold';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 66px;
+    color: #4abebd;
+    text-align: center;
+    padding-top: 55px;
+}
+.web-client-content-box-paragraph{
+    max-width: 470px;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+}
+.news-title{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'ProximaNova-Black';
+    text-align: center;
+    padding-bottom: 60px;
+}
+.news-wrapper{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+}
+.news-item{
+    box-shadow: 0 0 11px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #ffffff;
+    max-width: 30%;
+    min-height: 368px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+.news-item:first-child .news-image{
+    background-color: #f4f4f4;
+}
+.news-image{
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 6px;
+
+    min-height: 169px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news-date{
+    font-family: 'ProximaNova-Thin';
+    padding-top: 21px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    font-variant: small-caps;
+    color: #898989;
+    padding-bottom: 13px;
+}
+.news-text{
+    font-family: 'ProximaNova-Thin';
+    font-weight: 100;
+    line-height: 18px;
+    font-size: 14px;
+
+}
+.news-price{
+    color: #62b6b5;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+}
+.news-item:nth-child(2) .news-image img{
+    margin-left: 35px;
+}
+.news .default-btn{
+    min-width: 222px;
+    min-height: 50px;
+    border-radius: 25px;
+    margin: 46px auto 15px;
+}
+.news .default-btn p{
+    font-size: 18px;
+}
+.offer{
+    background-image: url('../media/formbg.jpg');
+    min-height: 657px;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.form-content{
+    box-shadow: 0 0 28px 2px rgba(108, 108, 108, 0.12);
+    border: 14px solid #62b6b5;
+}
+.form-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    min-width: 240px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #acacac;
+    margin: 0 40px;
+    padding: 0 11px;
+    color: #fff;
+}
+input::placeholder{
+    font-size: 14px;
+    font-weight: 300;
+    color: #acacac;
+
+}
+.form-title{
+    max-width: 345px;
+}
+.form-text{
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'ProximaNova-ExtraBold';
+}
+input:first-child{
+    margin-top: 150px;
+}
+input:nth-child(2){
+    margin-top: 39px;
+}
+input:nth-child(3){
+    margin-top: 40px;
+}
+input:last-child{
+    margin-top: 70px;
+    margin-bottom: 110px;
+}
+input[type="submit"]{
+    box-shadow: 0 0 15px 1px rgba(108, 108, 108, 0.11);
+    border-radius: 25px;
+    background-color: #62b6b5;
+    height: 50px;
+    color: #ffffff;
+    font-size: 18px;
+    transition: 0.8s ease all;
+    cursor: pointer;
+}
+.form-content{
+    margin-top: 73px;
+}
+.offer-text{
+    font-family: 'ProximaNova-ExtraBold';
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    max-width: 408px;
+    margin-top: 212px;
+    position: relative;
+    padding-left: 65px;
+}
+.offer-text:before{
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 6px solid #fff;
+    background-color: #4abebd;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-menu-item{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 37px;
+    font-family: 'ProximaNova-ExtraBold'
+}
+.footer-nav{
+    display: flex;
+}
+.footer .footer-container{
+    padding-top: 71px;
+}
+.col_1{
+    padding-right: 87px;
+}
+.col_2{
+    padding-left: 42px;
+    padding-top: 6px;
+    padding-right: 38px;
+}
+.col_3{
+    padding-left: 70px;
+    padding-right: 29px;
+}
+.col_4{
+    padding-left: 45px;
+}
+.col_3 .footer-menu-item{
+    position: relative;
+}
+.col_3 .footer-menu-item:before{
+    content: "\f003";
+    color: #62b6b5;
+    font-family: icomoon;
+    position: absolute;
+    top: -10px;
+    left: -22px;
+}
+.col_2 .footer-menu-item{
+    line-height: 20px;
+}
+.col_1, .col_2, .col_3{
+    position: relative;
+}
+.col_1:after, .col_2:after, .col_3:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 1px;
+    height: 132px;
+    background-color: #62b6b5;
+}
+.footer-col_2{
+    max-width: 210px;
+    text-align: right;
+}
+.footer-number{
+    padding-left: 17px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'ProximaNova-Bold';
+    transition: .8s ease all;
+}
+.address{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 33px;
+}
+.address{
+    position: relative;
+}
+.address:before{
+    position: absolute;
+    content: "\f041";
+    font-family: icomoon;
+    top: 0;
+    right: 95%;
+    color: #62b6b5;
+    font-size: 24px;
+}
+.col_2 li{
+    max-width: 170px;
+}
+.default-btn:hover{
+    box-shadow: 0 0 11px 0px rgba(108, 108, 108, 0.8);
+}
+input[type="submit"]:hover{
+    box-shadow: 0 0 15px 10px rgba(108, 108, 108, 0.5);
+}
+.tel-number:hover, .footer-number:hover{
+    color: #51aead;
+}
+.header .nav ul li a:hover{
+    color: #51aead;
+}
+.footer li a{
+    transition: 0.8s ease all;
+}
+.footer li a:hover{
+    color: #51aead;
+}
+.modal-menu{
+    display: none;
+    max-width: 70%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(81, 174, 173, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    animation: menu 1s ease;
+}
+.modal-menu.disappear{
+    animation: menu-reverse 1s ease;
+}
+@keyframes menu {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes menu-reverse {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.nav.active{
+    display: block;
+}
+.nav.active ul li{
+    margin: 10px 0;
+}
+.nav.active ul li a{
+    color: #fff;
+    font-size: 25px;
+}
+@media only screen and (max-width: 1150px){
+    .feature-img{
+        width: 35%;
+    }
+    .logo{
+        margin-right: 6vw;
+    }
+    .telemetrics{
+        background-position: 80%;
+    }
+    .telemetrics-border{
+        margin-left: 600px;
+    }
+    .features-img{
+        width: 30%;
+    }
+    .feature:nth-child(2){
+        left: 9%;
+    }
+    .feature-text-box-title{
+        font-size: 15px;
+    }
+    .feature-text-box-text{
+        font-size: 11px;
+    }
+    .feature-img-wrapper{
+        width: 50px;
+        height: 50px;
+    }
+    .feature:nth-child(2) .feature-text-box{
+        left: 30px;
+        top: 3px;
+    }
+    .feature:nth-child(5) {
+        top: 15%;
+        right: 10%;
+    }
+    .feature:nth-child(5) .feature-text-box{
+        left: 10px;
+        top: 4px;
+    }
+
+    .feature:nth-child(3) {
+        top: 42%;
+        left: 11%;
+    }
+
+    .feature:nth-child(6) .feature-text-box{
+        max-width: 282px;
+        left: 15px;
+        top: 5px;
+    }
+    .feature:nth-child(6) {
+        top: 42%;
+        right: 8%;
+    }
+    .feature:nth-child(4) {
+        top: 70%;
+        left: 13%;
+    }
+    .feature:nth-child(7) {
+        right: 10%;
+        top: 68%;
+    }
+    .feature:nth-child(7) .feature-text-box{
+        left: 15px;
+        top: 5px;
+    }
+    .features-title{
+        padding-top: 80px;
+        font-size: 25px;
+
+    }
+    .mobile-app-title{
+        font-size: 30px;
+    }
+    .mobile-app-text{
+        font-size: 17px;
+    }
+    .mobile-app-text:before{
+        top: 11%;
+    }
+
+    .feature-text-box-title {
+        font-size: 20px;
+    }
+    .news-price{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .features-img {
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 1050px){
+    .col_1 {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .col_2 {
+        padding-left: 25px;
+        padding-top: 6px;
+        padding-right: 30px;
+    }
+    .col_3 {
+        padding-left: 35px;
+        padding-right: 19px;
+    }
+    .col_4 {
+        padding-left: 25px;
+    }
+    .features-content .feature-img{
+        display: none;
+    }
+    .feature{
+        position: static;
+        margin-bottom: 20px;
+    }
+    .feature:nth-child(2), .feature:nth-child(3), .feature:nth-child(4){
+        flex-direction: row;
+    }
+    .feature:nth-child(3) .feature-text-box,
+    .feature:nth-child(4) .feature-text-box,
+    .feature:nth-child(2) .feature-text-box,
+    .feature:nth-child(4) .feature-text-box,
+    .feature:nth-child(5) .feature-text-box,
+    .feature:nth-child(6) .feature-text-box,
+    .feature:nth-child(7) .feature-text-box
+    {
+        position: static;
+        max-width: none;
+    }
+    .features-title{
+        padding-bottom: 30px;
+    }
+    .feature-img-wrapper {
+        min-width: 70px;
+        min-height: 70px;
+        margin-right: 20px;
+    }
+
+
+}
+@media only screen and (max-width: 1000px){
+    .nav{
+        display: none;
+    }
+    .header .header-content{
+        justify-content: space-evenly;
+    }
+    .burger{
+        display: block;
+    }
+    .modal-menu.active{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 950px){
+    .telemetrics-title{
+        font-size: 35px;
+    }
+    .TA-title{
+        font-size: 25px;
+    }
+    .TA-text{
+        font-size: 16px;
+    }
+    .telemetrics-border {
+        margin-left: 400px;
+    }
+    .telemetrics-text-box{
+        padding-top: 50px;
+    }
+    .telemetrics-text{
+        font-size: 20px;
+    }
+    .telemetrics-text-box .default-btn{
+        margin-bottom: 100px;
+    }
+    .mobile-app-title{
+        max-width: 400px;
+    }
+    .mobile-app-text{
+        max-width: 350px;
+    }
+    .mobile-app-wrapper{
+        justify-content: center;
+    }
+    .mobile-app-textbox{
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 902px){
+    .service-name{
+        font-size: 20px;
+    }
+    .service {
+        font-size: 16px;
+        margin-right: 13vw;
+    }
+    .price-table{
+        padding-left: 20px;
+    }
+    .cost{
+        font-size: 15px;
+    }
+    .news-price {
+        font-size: 13px;
+    }
+    .news-text{
+        font-size: 11px;
+    }
+    .col_4{
+        display: none;
+    }
+    .col_3:after{
+        display: none;
+    }
+    .col_1 {
+        padding-right: 50px;
+        padding-left: 30px;
+    }
+    .col_2{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .col_3{
+        padding-left: 55px;
+    }
+
+}
+@media only screen and (max-width: 850px){
+    .news-title{
+        padding-bottom: 40px;
+    }
+    .news-item{
+        margin-bottom: 30px;
+        max-width: 45%;
+    }
+    .news-item:first-child{
+        margin-right: 35px;
+    }
+    .news-wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .news .default-btn{
+        margin-top: 25px;
+    }
+    .col_3{
+        padding-left: 45px;
+    }
+    .col_2 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .col_1 {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .telemetrics-title{
+        font-size: 30px;
+    }
+    .service-name{
+        font-size: 19px;
+    }
+    .service{
+        font-size: 14px;
+        margin-right: 8vw;
+    }
+
+}
+@media only screen and (max-width: 800px){
+    .telemetrics {
+        background-position: 70%;
+    }
+    .telemetrics-text{
+        max-width: 430px;
+    }
+    .telemetrics-text-box .default-btn{
+        margin-bottom: 160px;
+    }
+    .offer-text:before{
+        left: 5%;
+        top: 30%;
+    }
+    .service{
+        min-width: 370px;
+        margin-right: 15vw;
+    }
+    .col_2{
+        display: none;
+    }
+    .col_1 {
+        padding-right: 84px;
+        padding-left: 50px;
+    }
+    .col_3 {
+        padding-left: 100px;
+    }
+    .telemetrics-text-box .default-btn {
+        margin-bottom: 130px;
+    }
+    .telemetrics-border {
+        margin-left: 250px;
+    }
+
+}
+@media only screen and (max-width: 701px){
+    .offer{
+        background-position: 100%;
+    }
+    .service-name{
+        font-size: 14px;
+    }
+    .service{
+        font-size: 11px;
+        min-width: 325px;
+    }
+    .cost{
+        font-size: 12px;
+    }
+    .offer-text{
+        font-size: 19px;
+    }
+    .col_1{
+        padding-right: 54px;
+    }
+    .col_3{
+        padding-left: 70px;
+    }
+}
+@media only screen and (max-width: 650px){
+    .tel-number{
+        margin-right: 0;
+    }
+    .features-title{
+        font-size: 21px;
+    }
+    .feature-text-box-title {
+        font-size: 17px;
+    }
+    .service{
+        margin-right: 7vw;
+    }
+    .col_1{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .col_3{
+        padding-left: 50px;
+    }
+    input:first-child{
+        margin-top: 80px;
+    }
+    input:last-child {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .form-container{
+        flex-wrap: wrap-reverse;
+    }
+    .offer-text{
+        margin-top: 80px;
+    }
+    .form-content {
+        margin-top: 35px;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .header-content .default-btn{
+        display: none;
+    }
+    .mobile-app-title {
+        font-size: 25px;
+    }
+    .mobile-app-text {
+        font-size: 16px;
+    }
+    .telemetrics-text-box .default-btn {
+        margin-bottom: 100px;
+    }
+    .telemetrics-border {
+        margin-left: 160px;
+    }
+    .TA-text {
+        font-size: 18px;
+    }
+    .TA-title {
+        font-size: 35px;
+        padding-top: 160px;
+    }
+    .price-title{
+        padding-top: 0;
+        font-size: 20px;
+    }
+    .mobile-app-text{
+        line-height: 25px;
+    }
+    .news-price {
+        font-size: 12px;
+    }
+    .col_1 {
+        padding-right: 20px;
+        padding-left: 15px;
+    }
+    .col_3 {
+        padding-left: 35px;
+    }
+}
+@media only screen and (max-width: 550px) {
+
+    .telemetrics {
+        background-position: 55%;
+    }
+    .feature-text-box-title {
+        font-size: 18px;
+    }
+    .TA-title{
+        font-size: 23px;
+    }
+    .TA-text {
+        font-size: 16px;
+    }
+    .features-title{
+        padding-top: 20px;
+        font-size: 20px;
+    }
+    .service-name {
+        font-size: 11px;
+    }
+    .service {
+        font-size: 11px;
+        min-width: 265px;
+        margin-right: 5vw;
+    }
+    .price .default-btn{
+        margin-top: 20px;
+    }
+    .mobile-app-wrapper{
+        flex-wrap: wrap;
+
+    }
+    .mobile-app-title{
+        padding-top: 120px;
+        text-align: center;
+    }
+    .download {
+        padding-top: 35px;
+    }
+    .mobile-app-title {
+        padding-top: 120px;
+    }
+    .mobile-app-text:before {
+        top: 0;
+    }
+    .web-client-title{
+        font-size: 28px;
+        padding-top: 35px;
+    }
+    .news-item{
+        max-width: 88%;
+    }
+    .news-item:first-child {
+        margin-right: 0;
+    }
+    .web-client-content{
+        margin-bottom: 30px;
+    }
+    .news-text {
+        font-size: 16px;
+    }
+    .news-price {
+        font-size: 17px;
+    }
+    .footer-col_1{
+        display: none;
+    }
+    .footer-col_2 {
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .address:before{
+        right: 100%;
+    }
+    .price-title{
+        padding-bottom: 30px;
+    }
+    .tel-number{
+        margin-right: 8px;
+    }
+    .logo{
+        margin-right: 2vw;
+    }
+    .cost{
+        font-size: 10px;
+    }
+
+
+
+}
+@media only screen and (max-width: 450px){
+    .features-title{
+        font-size: 15px;
+    }
+    .feature-text-box-title {
+        font-size: 13px;
+    }
+
+
+    .telemetrics-border{
+        margin: 0;
+    }
+    .telemetrics-arrow:after{
+        left: 99%;
+        border-width: 48.5px 0 46.5px 56px;
+    }
+    .telemetrics-arrow{
+        width: 190px;
+    }
+    .telemetrics-text-box .default-btn{
+        margin-bottom: 50px;
+
+    }
+    .TA-title {
+        font-size: 17px;
+    }
+    .TA-text {
+        font-size: 0.7em;
+    }
+    .price-title {
+        padding-bottom: 0px;
+        font-size: 20px;
+    }
+    .mobile-app-title {
+        font-size: 20px;
+        padding-top: 150px;
+    }
+    .mobile-app-text {
+        font-size: 16px;
+    }
+    .web-client-title {
+        font-size: 19px;
+    }
+    .news-title{
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+    .feature-text-box-title {
+        font-size: 16px;
+    }
+    .feature-text-box-text {
+        font-size: 11px;
+    }
+    .web-client-title{
+        padding-top: 10px;
+        line-height: 40px;
+        padding-bottom: 30px;
+    }
+    .web-client-content-box-paragraph {
+        font-size: 14px;
+    }
+    .web-client-content{
+        min-height: 240px;
+    }
+
+    .form-content{
+        max-width: 100%;
+    }
+    input{
+        margin: 0 10px;
+    }
+    input:first-child{
+        margin-top: 70px;
+    }
+    .footer .footer-container{
+        padding-top: 0;
+    }
+    .news-price{
+        font-size: 13px;
+    }
+    .service{
+        line-height: 1.5;
+        min-width: auto;
+        max-width: 188px;
+        font-size: 12px;
+    }
+    .cost{
+        font-size: 9px;
+    }
+    .price-table{
+        padding-left: 0;
+        border: none;
+        background: none;
+        min-height: auto;
+    }
+    .address{
+        font-size: 18px;
+    }
+    .address:before{
+        right: 86%;
+    }
+    .telemetrics-text-box{
+        padding-top: 20px;
+    }
+    .telemetrics {
+        background-position: 50%;
+    }
+
+
+
+}
+
+
+
+
